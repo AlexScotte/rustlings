@@ -3,10 +3,17 @@
 // Execute `rustlings hint functions3` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
+/*
+This time, the function *declaration* is okay, but there's something wrong
+with the place where we're calling the function.
+
+As a reminder, you can freely play around with different solutions in Rustlings!
+Watch mode will only jump to the next exercise if you remove the `I AM NOT
+DONE` comment.
+*/
 
 fn main() {
-    call_me();
+    call_me(1);
 }
 
 fn call_me(num: u32) {

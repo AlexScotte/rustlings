@@ -8,14 +8,18 @@
 // Execute `rustlings hint functions4` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
+/*
+The error message points to the function `sale_price` and says it expects a type
+after the `->`. This is where the function's return type should be -- take a
+look at the `is_even` function for an example!
+*/
 
 fn main() {
     let original_price = 51;
     println!("Your sale price is {}", sale_price(original_price));
 }
 
-fn sale_price(price: i32) -> {
+fn sale_price(price: i32) -> i32{
     if is_even(price) {
         price - 10
     } else {
