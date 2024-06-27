@@ -7,13 +7,30 @@
 //
 // Execute `rustlings hint vecs2` or use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
+/*
+    In the first function we are looping over the Vector and getting a reference to
+    one `element` at a time.
+
+    To modify the value of that `element` we need to use the `*` dereference
+    operator. You can learn more in this chapter of the Rust book:
+    https://doc.rust-lang.org/stable/book/ch08-01-vectors.html#iterating-over-the-values-in-a-vector
+
+    In the second function this dereferencing is not necessary, because the `map`
+    function expects the new value to be returned.
+
+    After you've completed both functions, decide for yourself which approach you
+    like better.
+
+    What do you think is the more commonly used pattern under Rust developers?
+*/
 
 fn vec_loop(mut v: Vec<i32>) -> Vec<i32> {
     for element in v.iter_mut() {
         // TODO: Fill this up so that each element in the Vec `v` is
         // multiplied by 2.
-        ???
+        *element = *element * 2;
+        // OR
+        // *element *= 2
     }
 
     // At this point, `v` should be equal to [4, 8, 12, 16, 20].
@@ -24,7 +41,7 @@ fn vec_map(v: &Vec<i32>) -> Vec<i32> {
     v.iter().map(|element| {
         // TODO: Do the same thing as above - but instead of mutating the
         // Vec, you can just return the new number!
-        ???
+        element * 2
     }).collect()
 }
 
