@@ -5,13 +5,21 @@
 //
 // Execute `rustlings hint if2` or use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
+/*
+    For that first compiler error, it's important in Rust that each conditional
+    block returns the same type! To get the tests passing, you will need a couple
+    conditions checking different input values.
+*/
 
 pub fn foo_if_fizz(fizzish: &str) -> &str {
     if fizzish == "fizz" {
         "foo"
-    } else {
-        1
+    } 
+    else if (fizzish == "fuzz") {
+        "bar"
+    }
+    else {
+        "baz"
     }
 }
 
