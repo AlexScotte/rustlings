@@ -3,7 +3,16 @@
 // Execute `rustlings hint move_semantics1` or use the `hint` watch subcommand
 // for a hint.
 
-// I AM NOT DONE
+/*
+    So you've got the "cannot borrow `vec` as mutable, as it is not declared as mutable"
+    error on the line where we push an element to the vector, right?
+
+    The fix for this is going to be adding one keyword, and the addition is NOT on
+    the line where we push to the vector (where the error is).
+
+    Also: Try accessing `vec0` after having called `fill_vec()`. See what
+    happens!
+*/
 
 #[test]
 fn main() {
@@ -15,7 +24,7 @@ fn main() {
 }
 
 fn fill_vec(vec: Vec<i32>) -> Vec<i32> {
-    let vec = vec;
+    let mut vec = vec;
 
     vec.push(88);
 
