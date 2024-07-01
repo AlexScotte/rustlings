@@ -11,17 +11,25 @@
 // Execute `rustlings hint hashmaps1` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
+/*
+    Hint 1: Take a look at the return type of the function to figure out
+            the type for the `basket`.
+
+    Hint 2: Number of fruits should be at least 5. And you have to put
+            at least three different types of fruits.
+*/
 
 use std::collections::HashMap;
 
 fn fruit_basket() -> HashMap<String, u32> {
-    let mut basket = // TODO: declare your hash map here.
+    let mut basket = HashMap::new();// TODO: declare your hash map here.
 
     // Two bananas are already given for you :)
     basket.insert(String::from("banana"), 2);
-
+    
     // TODO: Put more fruits in your basket here.
+    basket.insert(String::from("orange"), 1);
+    basket.insert(String::from("strawberry"), 2);
 
     basket
 }
