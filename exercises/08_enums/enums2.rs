@@ -3,11 +3,18 @@
 // Execute `rustlings hint enums2` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
+/*  
+    You can create enumerations that have different variants with different types
+    such as no data, anonymous structs, a single string, tuples, ...etc
+*/
 
 #[derive(Debug)]
 enum Message {
     // TODO: define the different variants used below
+    Move { x: i32, y: i32 },
+    Echo(String),
+    ChangeColor(i32, i32, i32),
+    Quit,
 }
 
 impl Message {
